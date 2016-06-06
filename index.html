@@ -4,28 +4,65 @@
 <link rel="stylesheet" href="day.css">
 <style type="text/css">
 .day {background: white; color: black;}
-.night {background: black; color: white;}
+.day dt { cursor: pointer; font-weight: bold; background: #e3e3e3; font-size: 1.25em;}
+
+.night  {background: black; color: #e7e7e7;} 
+.night dt { cursor: pointer; font-weight: bold; background: #1c1c1c; font-size: 1.25em;}
+
+body {width: 500px;}
 </style>
+
+
+
 </head>
 <body class="day">
 <h1>My Website</h1>
 <p> My name is Sam Hollenbeck and this is my website.</p>
 
-<h3>Facts about me:</h3>
-<li> My name is Sam hollenbeck</li>
-<li>This is my website.</li>
-<li>These are facts about me.</li>
-<li>You are reading them.</li>
-<li>The previous fact wasn't about me. It was about you.</li>  
+<p></p>
+<p></p>
+<p></p>
 
+<h2>All About Me</h2>
 
+<dt>Where do you live?</dt>
+<dd>Austin, TX</dd>
+<dt>What are some of your hobbies?</dt>
+<dd>Filming, Swimming, Music, Sailing, Running, and Singing.</dd>
+<dt>Do you play any instruments?</dt>
+<dd>Yes. I play guitar and piano.</dd>
 
+<p></p>
+<p></p>
+
+<h2>Facts about me:</h2>
+<li> I have a dog named Lily.</li>
+<li>She is a Cavapoo.</li>
+<li>Some of my relatives live in England.</li>
+<li> I have filmed 2 Spanish Soap Opera wiht my friends.</li>
+
+<p></p>
 <p></p>
 
 <button>Day</button>
 <button>Night</button>
 
 <script>
+
+(function() {
+
+	var dd = $('dd')
+	dd.hide();
+	$('dt').on('mouseenter', function( ) {
+		$(this)
+			.next()
+				.slideDown()
+				.siblings('dd').slideUp();
+					
+	})
+})();
+
+
 
 (function() {
 	$('button').click(function() {
