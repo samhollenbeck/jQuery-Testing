@@ -4,15 +4,17 @@
 <link rel="stylesheet" href="day.css">
 <style type="text/css">
 .day {background: white; color: black;}
-.day dt { cursor: pointer; font-weight: bold; background: #e3e3e3; font-size: 1.25em;}
+.day dt { cursor: pointer; font-weight: bold; background: #e3e3e3; border-bottom: 1px solid white; font-size: 1.25em;}
 
 .night  {background: black; color: #e7e7e7;} 
-.night dt { cursor: pointer; font-weight: bold; background: #1c1c1c; font-size: 1.25em;}
+.night dt { cursor: pointer; font-weight: bold; border-bottom: 1px solid black; background: #1c1c1c; font-size: 1.25em;}
 
 body {width: 500px;}
+
+.thecolorblue {color: blue;}
+
+a {text-decoration: none; color: black;}
 </style>
-
-
 
 </head>
 <body class="day">
@@ -28,7 +30,7 @@ body {width: 500px;}
 <dt>Where do you live?</dt>
 <dd>Austin, TX</dd>
 <dt>What are some of your hobbies?</dt>
-<dd>Filming, Swimming, Music, Sailing, Running, and Singing.</dd>
+<dd>Filming, <span>Swimming</span>, Music, Sailing, Running, and Singing.</dd>
 <dt>Do you play any instruments?</dt>
 <dd>Yes. I play guitar and piano.</dd>
 
@@ -39,7 +41,7 @@ body {width: 500px;}
 <li> I have a dog named Lily.</li>
 <li>She is a Cavapoo.</li>
 <li>Some of my relatives live in England.</li>
-<li> I have filmed 2 Spanish Soap Opera wiht my friends.</li>
+<li> I have filmed two <a href="www.youtube.com/watch?v=-sInhaZpij0">Spanish Soap Operas</a> with my friends.</li>
 
 <p></p>
 <p></p>
@@ -71,9 +73,13 @@ body {width: 500px;}
 	});
 })();
 
+(function() {
+	$('span').click(function() {
+		$("span").toggleClass("thecolorblue ")
+	});
+})();
+
 </script>
 
 </body>
 </html>
-
-
