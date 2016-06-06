@@ -1,0 +1,42 @@
+<html>
+<head> 
+<script src="jquery-1.12.4 (1).js"></script>
+<link rel="stylesheet" href="day.css">
+<style type="text/css">
+.day {background: white; color: black;}
+.night {background: black; color: white;}
+</style>
+</head>
+<body class="day">
+<h1>My Website</h1>
+<p> My name is Sam Hollenbeck and this is my website.</p>
+
+<h3>Facts about me:</h3>
+<li> My name is Sam hollenbeck</li>
+<li>This is my website.</li>
+<li>These are facts about me.</li>
+<li>You are reading them.</li>
+<li>The previous fact wasn't about me. It was about you.</li>  
+
+
+
+<p></p>
+
+<button>Day</button>
+<button>Night</button>
+
+<script>
+
+(function() {
+	$('button').click(function() {
+		console.log("click")
+		$("body").toggleClass("day night")
+	});
+})();
+
+</script>
+
+</body>
+</html>
+
+
